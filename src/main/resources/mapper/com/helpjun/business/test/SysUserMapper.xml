@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.helpjun.business.test.mapper.SysUserMapper">
+
+    <resultMap id="simpleUser" type="com.helpjun.business.test.entity.SysUserEntity">
+        <result column="id" property="id"></result>
+        <result column="username" property="username"></result>
+        <result column="realname" property="realname"></result>
+    </resultMap>
+
+    <!-- 查找用户信息 -->
+    <select id="findAllUser" resultType="com.helpjun.business.test.entity.SysUserEntity">
+       select id,username,realname from sys_user
+    </select>
+
+</mapper>
